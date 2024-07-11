@@ -2,6 +2,8 @@ import {Cart} from "../Cart/Cart";
 import {goodsArray} from "../../goodsArray.js";
 import {Card} from "../Card/Card";
 
+import './goods.scss';
+
 export const Goods = () => (
     <section className="goods">
         <div className="container goods__container">
@@ -15,8 +17,6 @@ export const Goods = () => (
                     )}
                 </ul>
             </div>
-
-
         <Cart />
         </div>
     </section>

@@ -1,5 +1,5 @@
-@use "../varibles" as *;
-@use "../media" as *;
+@use "../../scss/varibles" as *;
+@use "../../scss/media" as *;
 
 .filter {
   &__form {
@@ -54,15 +54,15 @@
     }
 
     &_flower {
-      background-image: url("/img/flowers.png");
+      background-image: url("/public/img/flowers.png");
     }
 
     &_toys {
-      background-image: url("/img/bear-toy.png");
+      background-image: url("/public/img/bear-toy.png");
     }
 
     &_postcard {
-      background-image: url("/img/postcard.png");
+      background-image: url("/public/img/postcard.png");
     }
 
     &:hover {
@@ -79,23 +79,6 @@
     background-color: $light-orange;
   }
 
-  &__choices {
-    position: relative;
-  }
-
-  &__select {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    &:after {
-      content: "";
-      width: 8px;
-      height: 8px;
-      background: url("/img/arrow.svg") no-repeat center/contain;
-    }
-  }
-
   &__price {
     border: 0;
     padding: 0;
@@ -104,53 +87,11 @@
     gap: 8px;
   }
 
-  &__choices-box {
-    position: absolute;
-    top: calc(100% + 20px);
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $white;
-    padding: 24px;
-    border-radius: 12px;
-
     &_type {
       padding: 16px;
     }
   }
 
-  &__input-price {
-    border-radius: 32px;
-    padding: 8px 16px;
-    width: 110px;
-    height: 40px;
-    background-color: $bg;
-    border: none;
 
-    @include mobile {
-      width: 80px;
-    }
-  }
 
-  &__type-list {
-  }
 
-  &__type-item {
-    margin-bottom: 8px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__type-button {
-    white-space: nowrap;
-
-    &:hover {
-      color: $light-orange;
-    }
-
-    &_active {
-      color: $orange;
-    }
-  }
-}
