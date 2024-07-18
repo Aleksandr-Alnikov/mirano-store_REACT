@@ -1,0 +1,1 @@
+export const API_URL = 'https://mirano-api-4lhu.onrender.com';
