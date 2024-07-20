@@ -3,20 +3,20 @@ import {Cart} from "../Cart/Cart";
 import {Card} from "../Card/Card";
 
 import './goods.scss';
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {fetchGoods} from "../../redux/goodsSlice.js";
+import {useSelector} from "react-redux";
+// import {useEffect} from "react";
+// import {fetchGoods} from "../../redux/goodsSlice.js";
 import {API_URL} from "../../const.js";
 
 export const Goods = () => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const {items: goods, status: goodsStatus, error} = useSelector(state => state.goods);
 
-    useEffect(() => {
-        if (goodsStatus === 'idle') {
-            dispatch(fetchGoods());
-        }
-    }, [dispatch, goodsStatus]);
+    // useEffect(() => {
+    //     if (goodsStatus === 'idle') {
+    //         dispatch(fetchGoods({type: "bouquets"}));
+    //     }
+    // }, [dispatch, goodsStatus]);
 
 
     let content = null;
